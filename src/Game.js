@@ -70,9 +70,13 @@ export class Game {
     }
 
     init() {
+        console.log('🎮 Initializing game world...');
         this.cityGenerator.generate();
+        console.log('🏙️ City generated');
         this.npcSystem.generate(100);
+        console.log('👥 NPCs generated');
         this.animate();
+        console.log('✅ Game loop started');
     }
 
     animate() {
