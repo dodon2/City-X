@@ -1,0 +1,115 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ccc;
+}
+
+#game-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#ui-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+#ui-layer > * {
+    pointer-events: auto;
+}
+
+.hud-bar {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border: 1px solid #444;
+}
+
+.stat-row {
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    display: inline-block;
+    width: 80px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.stat-value {
+    font-weight: bold;
+}
+
+#crosshair {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 20;
+}
+
+#instructions {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border: 1px solid #555;
+    text-align: center;
+    z-index: 30;
+}
+
+.dialogue-container {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border: 1px solid #777;
+    width: 60%;
+    color: #eee;
+    z-index: 40;
+}
+
+.dialogue-text {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.dialogue-opt {
+    display: block;
+    width: 100%;
+    background: #222;
+    border: 1px solid #444;
+    color: #ccc;
+    padding: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.dialogue-opt:hover {
+    background: #444;
+}
