@@ -1,6 +1,10 @@
 import { Game } from './Game.js';
 
 window.addEventListener('DOMContentLoaded', () => {
-    const game = new Game();
-    console.log('Game initialized');
+    try {
+        const game = new Game();
+        console.log('✅ DictatorshipCity Game initialized successfully');
+    } catch (error) {
+        console.error('❌ Failed to initialize game:', error);
+    }
 });
